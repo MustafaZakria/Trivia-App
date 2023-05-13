@@ -2,43 +2,43 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.zeko.triviaapp.ui.fragments.GameWonFragment">
+    tools:context="com.zeko.triviaapp.ui.fragments.TitleFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/gameWonConstraintLayout"
+        android:id="@+id/titleConstraint"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/youWinBackground">
+        android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/nextMatchButton"
+            android:id="@+id/playButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/horizontal_margin"
+            android:layout_marginEnd="@dimen/horizontal_margin"
             android:paddingStart="@dimen/button_padding"
             android:paddingEnd="@dimen/button_padding"
-            android:text="Next Match"
-            android:textColor="@color/youWinDark"
+            android:text="Play"
+            android:textColor="@color/colorAccent"
             android:textSize="@dimen/button_text_size"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/youWinImage" />
+            app:layout_constraintTop_toBottomOf="@+id/titleImage" />
 
         <ImageView
-            android:id="@+id/youWinImage"
+            android:id="@+id/titleImage"
             android:layout_width="0dp"
-            android:layout_height="@dimen/game_over_height"
+            android:layout_height="@dimen/image_header_height"
             android:layout_marginStart="@dimen/horizontal_margin"
-            android:layout_marginTop="8dp"
             android:layout_marginEnd="@dimen/horizontal_margin"
-            android:layout_marginBottom="@dimen/vertical_margin"
             android:scaleType="fitCenter"
-            app:layout_constraintBottom_toTopOf="@+id/nextMatchButton"
+            app:layout_constraintBottom_toTopOf="@+id/playButton"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/you_win" />
+            app:srcCompat="@drawable/android_trivia" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
