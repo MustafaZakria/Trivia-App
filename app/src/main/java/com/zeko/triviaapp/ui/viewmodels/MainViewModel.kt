@@ -8,7 +8,9 @@ import kotlin.math.ceil
 import kotlin.math.floor
 
 class MainViewModel : ViewModel() {
-    private var score = 0
+    private var _score = 0
+    val score: Int
+    get() = _score
 
     private val _index = MutableLiveData<Int>(0)
     val index: LiveData<Int>
@@ -43,17 +45,17 @@ class MainViewModel : ViewModel() {
     }
 
     public fun isPassed(): Boolean {
-        return score > floor((questions.size / 2).toDouble())
+        return _score > floor((questions.size / 2).toDouble())
     }
 
     public fun resetGame() {
-        score = 0
+        _score = 0
         _index.value = 0
     }
 
     public fun setAnswer(answer: String) {
         if(answer == _index.value?.let { answers[it] }) {
-            score++
+            _score++
         }
     }
 

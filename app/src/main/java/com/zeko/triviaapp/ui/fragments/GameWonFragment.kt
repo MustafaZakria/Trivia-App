@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 import com.zeko.triviaapp.R
@@ -27,8 +28,12 @@ class GameWonFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val args = GameWonFragmentArgs.fromBundle(requireArguments())
+        Toast.makeText(context, "Score is ${args.score}", Toast.LENGTH_SHORT).show()
+        
+        
         binding.nextMatchButton.setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_gameWonFragment_to_titleFragment)
+            Navigation.createNavigateOnClickListener(GameWonFragmentDirections.actionGameWonFragmentToTitleFragment())
         )
     }
 

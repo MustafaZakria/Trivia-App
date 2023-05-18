@@ -66,9 +66,9 @@ class GameFragment : Fragment() {
 
     private fun getResult(view: View) {
         if(viewModel.isPassed()) {
-            view.findNavController().navigate(com.zeko.triviaapp.R.id.action_gameFragment_to_gameWonFragment)
+            view.findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameWonFragment(viewModel.score))
         } else {
-            view.findNavController().navigate(com.zeko.triviaapp.R.id.action_gameFragment_to_gameOverFragment)
+            view.findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameOverFragment(viewModel.score))
         }
         viewModel.resetGame()
     }
