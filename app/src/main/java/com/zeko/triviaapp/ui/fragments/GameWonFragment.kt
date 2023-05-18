@@ -28,7 +28,7 @@ class GameWonFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.nextMatchButton.setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_gameOverFragment3_to_titleFragment3)
+            Navigation.createNavigateOnClickListener(R.id.action_gameWonFragment_to_titleFragment)
         )
     }
 

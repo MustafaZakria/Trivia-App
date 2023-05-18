@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
-import androidx.navigation.findNavController
 import com.zeko.triviaapp.R
 import com.zeko.triviaapp.databinding.FragmentTitleBinding
 
@@ -28,7 +27,7 @@ class TitleFragment : Fragment() {
 
 
         binding.playButton.setOnClickListener (
-            Navigation.createNavigateOnClickListener(R.id.action_titleFragment3_to_gameFragment2)
+            Navigation.createNavigateOnClickListener(R.id.action_titleFragment_to_gameFragment)
                 )
     }
 

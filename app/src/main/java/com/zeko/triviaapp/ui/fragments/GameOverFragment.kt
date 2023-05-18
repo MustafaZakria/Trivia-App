@@ -27,7 +27,7 @@ class GameOverFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.tryAgainButton.setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_gameOverFragment3_to_titleFragment3)
+            Navigation.createNavigateOnClickListener(R.id.action_gameOverFragment_to_titleFragment)
         )
     }
 }
